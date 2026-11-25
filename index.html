@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anisha Manraj | Business Analytics &amp; Content Marketing</title>
+<meta name="description" content="Portfolio of Anisha Manraj, MBA student in Business Analytics with experience in HR operations, content creation and social media.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f3f5fa; --surface:#ffffff; --ink:#0b1b4a; --muted:#4a557a; --line:#d5dbea;
+  --accent:#d92b22; --accent-ink:#ffffff; --chip:#e6ebf7;
+  --head:"Bricolage Grotesque","Trebuchet MS",system-ui,sans-serif;
+  --body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0a1230; --surface:#111b42; --ink:#eef1fb; --muted:#aab4d6; --line:#26346b;
+    --accent:#ff5a4f; --accent-ink:#0a1230; --chip:#1a2757; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0a1230; --surface:#111b42; --ink:#eef1fb; --muted:#aab4d6; --line:#26346b;
+  --accent:#ff5a4f; --accent-ink:#0a1230; --chip:#1a2757; color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.05rem/1.65 var(--body)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+
+header.nav{position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:16px}
+.nav .logo{font:800 1.1rem var(--head);text-decoration:none}
+.nav ul{display:flex;gap:20px;list-style:none;margin:0;padding:0;font-weight:500;font-size:.95rem}
+.nav ul a{text-decoration:none;color:var(--muted)}
+.nav ul a:hover{color:var(--ink)}
+.theme{background:none;border:1px solid var(--line);color:var(--ink);border-radius:999px;padding:6px 14px;font:500 .85rem var(--body);cursor:pointer}
+@media (max-width:640px){.nav ul{display:none}}
+
+.hero{padding:72px 0 56px}
+.hero .role{color:var(--muted);font-weight:500;margin:0 0 12px}
+h1{font:800 clamp(3rem,10vw,6.5rem)/.95 var(--head);letter-spacing:-.03em;margin:0 0 28px}
+.lens{display:inline-flex;border:1.5px solid var(--ink);border-radius:999px;padding:4px;gap:4px;margin-bottom:20px}
+.lens button{border:0;background:none;color:var(--ink);font:600 .95rem var(--body);padding:8px 20px;border-radius:999px;cursor:pointer}
+.lens button[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink)}
+.pitch{font:700 clamp(1.4rem,3.4vw,2.1rem)/1.25 var(--head);max-width:22ch;margin:0 0 12px}
+.pitch-sub{max-width:56ch;color:var(--muted);margin:0 0 28px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;border:1.5px solid var(--ink);background:none;color:var(--ink);padding:11px 22px;border-radius:8px;font:600 1rem var(--body);text-decoration:none;cursor:pointer}
+.btn.primary{background:var(--ink);color:var(--bg)}
+.btn:hover{border-color:var(--accent)}
+
+section{padding:56px 0;border-top:1px solid var(--line)}
+h2{font:800 clamp(1.8rem,4vw,2.4rem)/1.1 var(--head);letter-spacing:-.02em;margin:0 0 28px}
+.about p{max-width:68ch;margin:0 0 16px}
+
+.skills-note{color:var(--muted);margin:-14px 0 20px}
+.group{margin-bottom:22px}
+.group h3{font:700 1.05rem var(--head);margin:0 0 10px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0}
+.chip{background:var(--chip);border:1px solid var(--line);border-radius:8px;padding:6px 14px;font-weight:500;font-size:.95rem;transition:opacity .25s,background .25s}
+body[data-lens="analytics"] .chip[data-lens="content"],
+body[data-lens="content"] .chip[data-lens="analytics"]{opacity:.35}
+body[data-lens="analytics"] .chip[data-lens~="analytics"],
+body[data-lens="content"] .chip[data-lens~="content"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+
+.exp details{background:var(--surface);border:1px solid var(--line);border-radius:12px;margin-bottom:14px}
+.exp summary{list-style:none;cursor:pointer;padding:18px 22px;display:flex;justify-content:space-between;gap:16px;align-items:center}
+.exp summary::-webkit-details-marker{display:none}
+.exp summary::after{content:"+";font:600 1.5rem var(--head);color:var(--accent);transition:transform .2s}
+.exp details[open] summary::after{transform:rotate(45deg)}
+.exp h3{font:700 1.2rem var(--head);margin:0}
+.exp .meta{color:var(--muted);font-size:.95rem;margin:2px 0 0}
+.exp .body{padding:0 22px 20px}
+.exp ul{margin:0;padding-left:20px}
+.exp li{margin-bottom:6px}
+
+.edu{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.edu article{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:22px}
+.edu h3{font:700 1.15rem var(--head);margin:0 0 4px}
+.edu p{margin:0;color:var(--muted)}
+.edu .years{color:var(--accent);font-weight:600;margin-bottom:8px}
+
+.contact p{max-width:52ch;margin:0 0 20px}
+.toast{margin-left:6px;color:var(--muted);font-size:.9rem}
+footer{padding:28px 0 40px;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body data-lens="analytics">
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#top">Anisha Manraj</a>
+    <nav aria-label="Main"><ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul></nav>
+    <button class="theme" id="theme" type="button" aria-label="Switch between light and dark mode">Dark mode</button>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap hero">
+    <p class="role">MBA student in Business Analytics, Jalandhar, India</p>
+    <h1>Anisha Manraj</h1>
+    <div class="lens" role="group" aria-label="Choose a lens for this portfolio">
+      <button type="button" data-set="analytics" aria-pressed="true">Analytics</button>
+      <button type="button" data-set="content" aria-pressed="false">Content</button>
+    </div>
+    <p class="pitch" id="pitch" aria-live="polite">I turn business questions into clear, data-backed answers.</p>
+    <p class="pitch-sub" id="pitchSub">I study Business Analytics and have worked in HR operations, where accurate records and clear coordination keep teams moving.</p>
+    <div class="cta">
+      <a class="btn primary" href="#contact">Get in touch</a>
+      <a class="btn" href="#experience">See my experience</a>
+    </div>
+  </div>
+
+  <section id="about" class="about"><div class="wrap">
+    <h2>About me</h2>
+    <p>I'm an MBA student specialising in Business Analytics. I like understanding a business problem, analysing the data behind it, and helping people make informed decisions.</p>
+    <p>Alongside my studies, I'm interested in content marketing, social media and communication. I bring teamwork, leadership and coordination skills, backed by two HR internships. I'm eager to learn, take on new challenges and grow in a professional environment.</p>
+  </div></section>
+
+  <section id="skills"><div class="wrap">
+    <h2>Skills</h2>
+    <p class="skills-note">Use the Analytics / Content switch at the top to highlight the skills for each side of my work.</p>
+    <div class="group"><h3>Analytical and business</h3>
+      <ul class="chips">
+        <li class="chip" data-lens="analytics">Data analysis</li>
+        <li class="chip" data-lens="analytics">Problem-solving</li>
+        <li class="chip" data-lens="analytics">Business research</li>
+        <li class="chip" data-lens="analytics">Attention to detail</li>
+      </ul></div>
+    <div class="group"><h3>Marketing and creative</h3>
+      <ul class="chips">
+        <li class="chip" data-lens="content">Content creation</li>
+        <li class="chip" data-lens="content">Social media management</li>
+        <li class="chip" data-lens="content">Content marketing</li>
+        <li class="chip" data-lens="content">Communication</li>
+      </ul></div>
+    <div class="group"><h3>Management and soft skills</h3>
+      <ul class="chips">
+        <li class="chip" data-lens="analytics content">Leadership</li>
+        <li class="chip" data-lens="analytics content">Team management</li>
+        <li class="chip" data-lens="analytics content">Team coordination</li>
+        <li class="chip" data-lens="analytics content">Adaptability</li>
+      </ul></div>
+    <div class="group"><h3>Tools</h3>
+      <ul class="chips">
+        <li class="chip" data-lens="analytics">MS Excel</li>
+        <li class="chip" data-lens="analytics">Google Sheets</li>
+        <li class="chip" data-lens="content">Canva</li>
+        <li class="chip" data-lens="analytics content">MS PowerPoint</li>
+        <li class="chip" data-lens="analytics content">MS Word</li>
+      </ul></div>
+    <div class="group"><h3>Languages</h3>
+      <ul class="chips"><li class="chip" data-lens="analytics content">English</li><li class="chip" data-lens="analytics content">Hindi</li></ul></div>
+  </div></section>
+
+  <section id="experience" class="exp"><div class="wrap">
+    <h2>Experience</h2>
+    <details open>
+      <summary><div><h3>HR Intern</h3><p class="meta">Uptoskills, Delhi · August 2025 to November 2025</p></div></summary>
+      <div class="body"><ul>
+        <li>Built communication skills through day-to-day work with colleagues.</li>
+        <li>Practised team management and team coordination.</li>
+        <li>Developed leadership skills while working in a team.</li>
+      </ul></div>
+    </details>
+    <details>
+      <summary><div><h3>HR Intern</h3><p class="meta">Amrit Malwa Capital, Jalandhar · June 2024 to July 2024</p></div></summary>
+      <div class="body"><ul>
+        <li>Assisted with day-to-day HR activities.</li>
+        <li>Supported employee coordination and communication activities.</li>
+        <li>Maintained and organised employee-related information and documentation.</li>
+      </ul></div>
+    </details>
+  </div></section>
+
+  <section id="education"><div class="wrap">
+    <h2>Education</h2>
+    <div class="edu">
+      <article>
+        <p class="years">2026 to 2028</p>
+        <h3>Master of Business Administration (MBA)</h3>
+        <p>Business Analytics<br>Lovely Professional University (LPU), India</p>
+      </article>
+      <article>
+        <p class="years">2023 to 2026</p>
+        <h3>Bachelor of Business Administration (BBA)</h3>
+        <p>Business Administration and Management<br>Apeejay College of Fine Arts, Jalandhar</p>
+      </article>
+    </div>
+  </div></section>
+
+  <section id="contact" class="contact"><div class="wrap">
+    <h2>Let's talk</h2>
+    <p>I'm open to internships and entry-level roles in business analytics, HR, content marketing and social media. Email is the quickest way to reach me.</p>
+    <div class="cta">
+      <a class="btn primary" href="mailto:myselfanisha2901@gmail.com">Email me</a>
+      <button class="btn" id="copy" type="button">Copy email address</button>
+      <a class="btn" href="https://www.linkedin.com/in/anisha-manraj-431957369" target="_blank" rel="noopener">LinkedIn</a>
+      <span class="toast" id="toast" role="status"></span>
+    </div>
+  </div></section>
+</main>
+
+<footer><div class="wrap">© <span id="yr"></span> Anisha Manraj</div></footer>
+
+<script>
+(function(){
+  var copy={
+    analytics:["I turn business questions into clear, data-backed answers.","I study Business Analytics and have worked in HR operations, where accurate records and clear coordination keep teams moving."],
+    content:["I make ideas clear, shareable and easy to follow.","I'm interested in content marketing and social media, and I use Canva and strong communication to turn ideas into posts people understand."]
+  };
+  var pitch=document.getElementById("pitch"), sub=document.getElementById("pitchSub");
+  document.querySelectorAll(".lens button").forEach(function(b){
+    b.addEventListener("click",function(){
+      var k=b.dataset.set;
+      document.body.dataset.lens=k;
+      document.querySelectorAll(".lens button").forEach(function(o){o.setAttribute("aria-pressed",String(o===b))});
+      pitch.textContent=copy[k][0]; sub.textContent=copy[k][1];
+    });
+  });
+
+  var root=document.documentElement, tb=document.getElementById("theme");
+  function isDark(){
+    var t=root.getAttribute("data-theme");
+    return t?t==="dark":window.matchMedia("(prefers-color-scheme: dark)").matches;
+  }
+  function label(){tb.textContent=isDark()?"Light mode":"Dark mode"}
+  tb.addEventListener("click",function(){
+    root.setAttribute("data-theme",isDark()?"light":"dark"); label();
+  });
+  label();
+
+  var toast=document.getElementById("toast");
+  document.getElementById("copy").addEventListener("click",function(){
+    var email="myselfanisha2901@gmail.com";
+    function done(m){toast.textContent=m;setTimeout(function(){toast.textContent=""},2500)}
+    if(navigator.clipboard&&navigator.clipboard.writeText){
+      navigator.clipboard.writeText(email).then(function(){done("Email copied")},function(){done(email)});
+    }else{done(email)}
+  });
+  document.getElementById("yr").textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
